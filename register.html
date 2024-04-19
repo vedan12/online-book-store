@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        form,h2{
+            background-color: rgb(192, 250, 76);
+            margin-top: 2rem;
+            margin-left: 3rem;
+            margin-right: auto;
+            font-size: 1.2rem;
+            border: 2px solid black;
+            width: 26rem;
+            padding: 1rem;
+        }
+        input:hover{
+            border: 1px solid black;
+        }
+        h2{
+            border: none;
+            background-image: linear-gradient(to right,rgb(241, 201, 201),rgb(246, 246, 220));
+            border-radius: 20px;
+        }
+        form{
+            border-radius: 10px 0 0 10px;
+            box-shadow: 10px 10px 0 rgb(17, 17, 17);
+
+        }
+        input{
+            font-size: 1.1rem;
+            border-radius: 0.3rem;
+        }
+        body{
+            background-image: url("register.avif");
+            background-size: cover;
+        }
+        #submit,#reset{
+            font-size: 1.3rem;
+            border-radius: 6px;
+            background-color: rgb(172, 172, 252);
+            padding: 0.4rem;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        #submit:hover,#reset:hover{
+            background-color: rgb(118, 118, 240);
+            color: rgb(245, 242, 241);
+        }
+    </style>
+</head>
+<body>
+    <h2>Online Book Store Registration Form</h2>
+    <form action="submit_form.php" method="post" enctype="multipart/form-data">
+        <label for="Username">Full Name : </label>
+        <input type="text" name="username" id="username" required><br><br>
+        <label for="email">Email : </label>
+        <input type="text" name="email" id="email" placeholder="     email....."><br><br>
+        <label for="mobNo">Mobile No : </label>
+        <input type="text" name="mobNo" id="mobNob" placeholder="    mobile number....." pattern="[1-9]{1}[0-9]{9}"><br><br>
+        <label for="Gender">Gender : </label>
+        <input type="radio" name="gender" id="male" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="male" checked>
+        <label for="female">Female</label><br><br>
+        <label for="country">Country : </label>
+        <select name="country" id="country">
+            <option value="india">India</option>
+            <option value="UK">UK</option>
+            <option value="japan">Japan</option>
+            <option value="london">London</option>
+            <option value="america">America</option>
+        </select><br><br>
+        <label for="quali">Qualification : </label>
+        <select name="quali" id="quali">
+            <option value="SSC">SSC</option>
+            <option value="HSC">HSC</option>
+            <option value="Graduated">Graduated</option>
+            <option value="Higher study">Higher study</option>
+            <option value=""></option>
+        </select><br><br>
+        <label for="language">Languages : </label>
+        <input type="checkbox" name="language[]" id="english" value="english">
+        <label for="english">English</label>
+        <input type="checkbox" name="language[]" id="Marathi" value="Marathi">
+        <label for="marathi">Marathi</label><br><br>
+        <input type="submit" value="submit" id="submit" onclick="ques()">
+        <input type="reset" value="reset" id="reset" onclick="">
+    </form>
+    <script>
+        function ques(){
+            let ask=prompt("Are you sure ?");
+            if(ask=="yes"){
+                done();
+            }
+            else{
+                alert("Fill it carefully.")
+            }
+        }
+        function done(){
+            let done=alert("Form Submmited successfully !!!")
+        }
+    </script>
+</body>
+</html>

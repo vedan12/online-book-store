@@ -1,0 +1,86 @@
+<!---
+Design the following static web pages required for an online book store web site.
+1) HOME PAGE: The static home page must contain three frames.
+2) LOGIN PAGE
+3) CATOLOGUE PAGE: The catalogue page should contain the details of all the books available in
+the web site in a table.
+4) REGISTRATION PAGE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="catalogue.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <img src="Asset-1.webp" alt="logo" class="logo">
+            <li onclick="window.location.href=`index.html`">Home</li>
+        </ul>
+        <ul>
+            <li onclick="window.location.href=`login.html`">Login</li>
+            <li onclick="window.location.href=`register.html`">Register</li>
+        </ul>
+    </div>
+    <h1>Our most popular sells..</h1>
+    <div class="container">
+    <div class="box"><img src="book1.jpeg" alt="Da-Vinchi"></div>
+    <div class="box"><img src="book2.jpeg" alt=""></div>
+    <div class="box"><img src="book3.webp" alt=""></div>
+</div>
+<h1 style="position: absolute;top: 39rem;">Here is the list of other Books </h1>
+<table>
+    <tr class="top">
+        <td>Sr. No.</td>
+        <td>Book Name</td>
+        <td>Author</td>
+        <td>Price</td>
+        <td>Buy</td>
+        <td>Preview</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Wings of Fire</td>
+        <td>Dr. APJ Abdul Kalam sir</td>
+        <td>235 Rs.</td>
+        <td><a href="">Buy Now</a></td>
+        <td><a href="">Preview</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>A Suitable Boy</td>
+        <td>Vikram Sethi</td>
+        <td>620 Rs</td>
+        <td><a href="">Buy Now</a></td>
+        <td><a href="">Preview</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Train to Pakistan</td>
+        <td>Khushwant Singh</td>
+        <td>835 Rs</td>
+        <td><a href="">Buy Now</a></td>
+        <td><a href="">Preview</a></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>The God of Small Things</td>
+        <td>Arundhati Roy</td>
+        <td>470 Rs</td>
+        <td><a href="">Buy Now</a></td>
+        <td><a href="">Preview</a></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>The White Tiger</td>
+        <td>Aravinda Adiga</td>
+        <td>680 Rs</td>
+        <td><a href="">Buy Now</a></td>
+        <td><a href="">Preview</a></td>
+    </tr>
+</table>
+</body>
+</html>
